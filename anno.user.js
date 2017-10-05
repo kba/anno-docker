@@ -9,7 +9,8 @@
 // ==/UserScript==
 
 const CDN = 'https://www.ub.uni-heidelberg.de/cdn/'
-const ANNO_BASE = 'https://anno.ub.uni-heidelberg.de/anno/'
+const ANNO_BASE = 'http://serv21.ub.uni-heidelberg.de:3333/'
+const collection = 'default'
 
 function injectJS(src) {
     let el = document.createElement("script")
@@ -27,7 +28,7 @@ function injectCSS(src) {
 
 function main() {
 
-    // hackety hack XXX
+    // hackety hack
     XrxUtils = {}
     XrxVue = {}
     // injectJS("semtonotes/latest/semtonotes.js")
@@ -52,8 +53,8 @@ function main() {
         displayAnnotations({
             annoEndpoint: ANNO_BASE + 'anno',
             loginEndpoint: ANNO_BASE + 'auth/login?from=' + document.location.href,
-            tokenEndpoint: ANNO_BASE + 'auth/token/test',
-            collection: 'test'
+            tokenEndpoint: ANNO_BASE + 'auth/token/' + collection,
+            collection,
         })
     }, 2000)
 }

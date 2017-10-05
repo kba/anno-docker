@@ -22,8 +22,8 @@ services:
       - ANNO_MIDDLEWARE_PLUGINS=@kba/anno-plugins:PreCollectionFile,
       - ANNO_STORE_HOOKS_PRE=@kba/anno-plugins:PreUserFile,@kba/anno-plugins:CreatorInjectorFile,@kba/anno-plugins:PreAclFile
       - ANNO_STORE_HOOKS_POST=@kba/anno-plugins:CreatorInjectorFile
-      - ANNO_BASE_URL=http://serv21.ub.uni-heidelberg.de
-      - ANNO_BASE_PATH=/anno
+      - ANNO_BASE_URL=http://serv21.ub.uni-heidelberg.de:3333
+      - ANNO_BASE_PATH=
       - OPENAPI_HOST=localhost:3333
       - OPENAPI_BASEPATH=/
       - OPENAPI_PATH=anno
